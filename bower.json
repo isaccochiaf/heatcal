@@ -1,36 +1,33 @@
 {
-  "name": "calendar-heatmap",
-  "version": "0.3.0",
-  "homepage": "https://github.com/DKirwan/calendar-heatmap",
-  "description": "A d3.js heatmap representing time series data. Inspired by Github's contribution chart",
-  "authors": [
-    "Darragh Kirwan <d@rragh.com>",
-    "Oskar Niburski <oskarniburski@gmail.com>"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/DKirwan/calendar-heatmap.git"
-  },
-  "main": [
-    "src/calendar-heatmap.js",
-    "src/calendar-heatmap.css"
-  ],
-  "dependencies": {
-    "d3": "3.5.x",
-    "moment": "2.11.x"
-  },
+  "name": "cal-heatmap",
+  "description": "Cal-Heatmap is a javascript module to create calendar heatmap to visualize time series data",
   "keywords": [
-    "d3",
-    "moment",
-    "heatmap"
+    "calendar",
+    "graph",
+    "d3js",
+    "heat map"
   ],
+  "version": "3.6.0",
+  "main": ["./cal-heatmap.js", "./cal-heatmap.css"],
+  "dependencies": {
+    "d3": ">= v3.0.6"
+  },
+  "location": "https://github.com/wa0x6e/cal-heatmap",
   "license": "MIT",
   "ignore": [
-    "vendor",
-    "example",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+    "test/",
+    "src/",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "package.json"
+  ],
+  "authors": [{
+    "name": "Wan Qi Chen",
+    "homepage": "http://www.kamisama.me"
+  }],
+  "homepage": "https://github.com/wa0x6e/cal-heatmap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wa0x6e/cal-heatmap.git"
+  }
 }

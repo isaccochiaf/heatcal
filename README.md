@@ -1,63 +1,9 @@
-# D3 Calendar Heatmap
-A [d3.js](https://d3js.org/) heatmap representing time series data. Inspired by Github's contribution chart
+# Cal-HeatMap [![Build Status](https://travis-ci.org/wa0x6e/cal-heatmap.png?branch=master)](https://travis-ci.org/wa0x6e/cal-heatmap) [![Coverage Status](https://coveralls.io/repos/wa0x6e/cal-heatmap/badge.svg?branch=master&service=github)](https://coveralls.io/github/wa0x6e/cal-heatmap?branch=master) [![NPM version](https://badge.fury.io/js/cal-heatmap.png)](http://badge.fury.io/js/cal-heatmap) [![Node.js Dependencies](https://david-dm.org/wa0x6e/cal-heatmap.png)](https://david-dm.org/wa0x6e/cal-heatmap) [![Circle CI](https://circleci.com/gh/wa0x6e/cal-heatmap.svg?style=svg)](https://circleci.com/gh/wa0x6e/cal-heatmap) [![Build Status](https://semaphoreci.com/api/v1/projects/bb1148af-7cec-4a1f-a69f-ee23bff028bd/517154/badge.svg)](https://semaphoreci.com/wa0x6e/cal-heatmap)
 
-![Reusable D3.js Calendar Heatmap chart](https://raw.githubusercontent.com/DKirwan/calendar-heatmap/develop/example/thumbnail.png)
+> Cal-Heatmap is a javascript module to create calendar heatmap to visualize time series data, a la github contribution graph
 
-## TODO
+This module will help you to create a calendar, like the *[contribution calendar](https://github.com/blog/1360-introducing-contributions)* appearing on each github user's page, but with navigation and more controls on the data formatting.
 
-* ~~Enable/disable tooltip~~
-* Editing of tooltip text
-* ~~Editing of the cell gradient colours~~
-* Configuration of the start/end dates
-* ~~Add optional callback for click events on the day cells~~
-* ~~Add project to bower~~
-* Remove example and vendor folders to separate `gh-pages` branch
+![image](https://raw.github.com/wa0x6e/cal-heatmap/gh-pages/img/screenshot.png)
 
-## Configuration
-
-|Property        | Usage           | Default  | Required |
-|:------------- |:-------------|:-----:|:-----:|
-| data | Chart data | none | yes |
-| selector | DOM selector to attach the chart to | body | no |
-| colorRange | Minimum and maximum chart gradient colors | ['#D8E6E7', '#218380'] | no |
-| tooltipEnabled | Option to render a tooltip | true | no |
-| legendEnabled | Option to render a legend | true | no |
-| onClick | callback function on day click events (see example below) | null | no |
-
-## Dependencies
-
-* [d3.js](https://d3js.org/)
-* [moment.js](http://momentjs.com/)
-
-## Usage
-
-1: Add d3.js and moment.js
-
-2: Include calendar-heatmap.js and calendar-heatmap.css
-`<link rel="stylesheet" type="text/css" href="path/tocalendar-heatmap.css">`
-`<script src="path/to/calendar-heatmap.js"></script>`
-
-3: Format the data so each array item has a `date` and `count` property.
-As long as `new Date()` can parse the date string it's ok. Note - there all data should be rolled up into daily bucket granularity.
-
-4: Configure the chart and render it
-```javascript
-// chart data example
-var chartData = [{
-  date: valid Javascript date object,
-  count: Number
-}];
-var chart1 = calendarHeatmap()
-              .data(chartData)
-              .selector('#chart-one')
-              .colorRange(['#D8E6E7', '#218380'])
-              .tooltipEnabled(true)
-              .onClick(function (data) {
-                console.log('onClick callback. Data:', data);
-              });
-chart1();  // render the chart
-```
-
-## Pull Requests and issues
-
-...are very welcome!
+See [documentation](http://cal-heatmap.com) for examples.
